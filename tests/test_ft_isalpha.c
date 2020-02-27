@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tests.h                                            :+:      :+:    :+:   */
+/*   test_ft_isalpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 22:02:20 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/27 23:15:02 by cbaek            ###   ########.fr       */
+/*   Created: 2020/02/27 23:12:34 by cbaek             #+#    #+#             */
+/*   Updated: 2020/02/27 23:17:12 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TESTS_H
-# define TESTS_H
+#include "tests.h"
 
-#include <stdio.h>
-#include <assert.h>
-#include <stdbool.h>
-#include "../libft.h"
-
-void test_ft_isdigit();
-void test_ft_isalpha();
-#endif
+void test_ft_isalpha()
+{
+	int i;
+	for (i = 65; i <= 90; i++)
+		assert(ft_isalpha(i) != 0 && "test_ft_isalpha()");
+	for (i = 97; i <= 122; i++)
+		assert(ft_isalpha(i) != 0 && "test_ft_isalpha()");
+}

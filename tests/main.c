@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 22:14:38 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/27 22:14:53 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/02/27 23:10:04 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 int main(void)
 {
 	test_ft_isdigit();
+	test_ft_isalpha();
 	return (0);
 }
