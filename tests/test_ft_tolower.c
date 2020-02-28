@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test_ft_tolower.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 22:14:38 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/28 17:19:28 by cbaek            ###   ########.fr       */
+/*   Created: 2020/02/28 17:17:47 by cbaek             #+#    #+#             */
+/*   Updated: 2020/02/28 17:18:11 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int main(void)
+void test_ft_tolower()
 {
-	test_ft_isdigit();
-	test_ft_isalpha();
-	test_ft_isascii();
-	test_ft_isalnum();
-	test_ft_isprint();
-	test_ft_strlen();
-	test_ft_toupper();
-	test_ft_tolower();
-	return (0);
+	int i;
+
+	for (i = 0; i <= 127; i++)
+	{
+		assert(ft_tolower(i) == tolower(i) && "test_ft_tolower()");
+	}
+	printf("%sSuccess: %s()\n", C_GREEN, __func__);
 }
