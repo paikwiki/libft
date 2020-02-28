@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 22:02:20 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/28 13:41:36 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/02/28 15:57:36 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include <assert.h>
 #include <stdbool.h>
 #include <ctype.h>
+#include <string.h>
 #include "../libft.h"
 
 void test_ft_isdigit();
