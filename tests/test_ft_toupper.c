@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tests.h                                            :+:      :+:    :+:   */
+/*   test_ft_toupper.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 22:02:20 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/28 17:10:53 by cbaek            ###   ########.fr       */
+/*   Created: 2020/02/28 17:04:13 by cbaek             #+#    #+#             */
+/*   Updated: 2020/02/28 17:15:50 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TESTS_H
-# define TESTS_H
+#include "tests.h"
 
-# define C_GREEN "\033[32m"
+void test_ft_toupper()
+{
+	int i;
 
-#include <stdio.h>
-#include <assert.h>
-#include <stdbool.h>
-#include <ctype.h>
-#include <string.h>
-#include "../libft.h"
-
-void test_ft_isdigit();
-void test_ft_isalpha();
-void test_ft_isascii();
-void test_ft_isalnum();
-void test_ft_isprint();
-void test_ft_strlen();
-void test_ft_toupper();
-#endif
+	for (i = 0; i <= 127; i++)
+	{
+		assert(ft_toupper(i) == toupper(i) && "test_ft_toupper()");
+	}
+	printf("%sSuccess: %s()\n", C_GREEN, __func__);
+}
