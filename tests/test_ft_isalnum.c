@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 12:39:52 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/28 12:46:23 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/02/28 13:42:42 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void test_ft_isalnum()
 		if (isdigit(i) || isalpha(i))
 			assert(ft_isalnum(i) != 0 && "test_ft_isalnum()");
 		else
-			assert(ft_isalnum(i) == 0 && "test_ftisalnum()");
+			assert(ft_isalnum(i) == 0 && "test_ft_isalnum()");
 	}
+	printf("%sSuccess: test_ft_isalnum()\n", C_GREEN);
 }

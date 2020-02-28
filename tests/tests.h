@@ -6,12 +6,14 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 22:02:20 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/28 13:08:30 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/02/28 13:41:36 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef TESTS_H
 # define TESTS_H
+
+# define C_GREEN "\033[32m"
 
 #include <stdio.h>
 #include <assert.h>
