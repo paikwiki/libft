@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tests.h                                            :+:      :+:    :+:   */
+/*   test_ft_isascii.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 22:02:20 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/28 11:04:13 by cbaek            ###   ########.fr       */
+/*   Created: 2020/02/28 10:52:17 by cbaek             #+#    #+#             */
+/*   Updated: 2020/02/28 12:32:18 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TESTS_H
-# define TESTS_H
+#include "tests.h"
 
-#include <stdio.h>
-#include <assert.h>
-#include <stdbool.h>
-#include "../libft.h"
+void test_ft_isascii()
+{
+	int i;
 
-void test_ft_isdigit();
-void test_ft_isalpha();
-void test_ft_isascii();
-#endif
+	for (i = 0; i <= 127; i++)
+		assert(ft_isascii(i) != 0 && "test_ft_isascii()");
+
+	for (i = -1; i >= -10; i--)
+		assert(ft_isascii(i) == 0 && "test_ft_isascii()");
+
+	for (i = 128; i <= 255; i++)
+		assert(ft_isascii(i) == 0 && "test_ft_isascii()");
+}
