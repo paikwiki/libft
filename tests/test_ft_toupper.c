@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 17:04:13 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/28 17:15:50 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/02/28 17:31:02 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void test_ft_toupper()
 	int i;
 
 	for (i = 0; i <= 127; i++)
-	{
 		assert(ft_toupper(i) == toupper(i) && "test_ft_toupper()");
-	}
 	printf("%sSuccess: %s()\n", C_GREEN, __func__);
 }

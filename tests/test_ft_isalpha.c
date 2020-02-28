@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 23:12:34 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/28 13:42:12 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/02/28 17:30:22 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ void test_ft_isalpha()
 		assert(ft_isalpha(i) == 0 && "test_ft_isalpha()");
 	for (i = 123; i <= 127; i++) // after uppers
 		assert(ft_isalpha(i) == 0 && "test_ft_isalpha()");
-	printf("%sSuccess: test_ft_isalpha()\n", C_GREEN);
+	printf("%sSuccess: %s()\n", C_GREEN, __func__);
 }

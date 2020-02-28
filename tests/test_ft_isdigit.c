@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 22:01:25 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/28 13:41:49 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/02/28 17:30:16 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ void test_ft_isdigit()
 		assert(ft_isdigit(i) == 0 && "test_ft_isdigit()");
 	for (i = 123; i <= 127; i++) // after uppers
 		assert(ft_isdigit(i) == 0 && "test_ft_isdigit()");
-	printf("%sSuccess: test_ft_isdigit()\n", C_GREEN);
+	printf("%sSuccess: %s()\n", C_GREEN, __func__);
 }
