@@ -6,13 +6,14 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 22:01:25 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/28 10:46:31 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/02/28 13:07:03 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-void test_ft_isdigit() {
+void test_ft_isdigit()
+{
 	int i;
 
 	for (i = '0'; i <= '9'; i++) // digit characters 48~57
