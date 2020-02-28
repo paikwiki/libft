@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 22:14:38 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/28 17:57:22 by cbaek            ###   ########.fr       */
+/*   Created: 2020/02/28 18:04:35 by cbaek             #+#    #+#             */
+/*   Updated: 2020/02/28 18:17:33 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "tests.h"
-
-int main(void)
+char	*ft_strchr(const char *s, int c)
 {
-	test_ft_isdigit();
-	test_ft_isalpha();
-	test_ft_isascii();
-	test_ft_isalnum();
-	test_ft_isprint();
-	test_ft_strlen();
-	test_ft_toupper();
-	test_ft_tolower();
-	test_ft_strchr();
+	int i;
+
+	if (s == 0)
+		return 0;
+	i = 0;
+	while (s[i] != 0)
+	{
+		if (s[i] == c)
+			return ((char *)&s[i]);
+		i++;
+	}
+	if (c == 0)
+		return ((char *)&s[i]);
 	return (0);
 }
