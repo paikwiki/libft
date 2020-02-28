@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 22:14:38 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/28 16:06:57 by cbaek            ###   ########.fr       */
+/*   Created: 2020/02/28 16:07:12 by cbaek             #+#    #+#             */
+/*   Updated: 2020/02/28 16:10:42 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "tests.h"
+#include "libc.h"
 
-int main(void)
+size_t	ft_strlen(const char *s)
 {
-	test_ft_isdigit();
-	test_ft_isalpha();
-	test_ft_isascii();
-	test_ft_isalnum();
-	test_ft_isprint();
-	test_ft_strlen();
-	return (0);
+	size_t len;
+
+	len = 0;
+	while (s[len] != 0)
+		len++;
+	return (len);
 }
