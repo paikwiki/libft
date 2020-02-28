@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 22:14:38 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/28 13:16:17 by cbaek            ###   ########.fr       */
+/*   Created: 2020/02/28 13:11:52 by cbaek             #+#    #+#             */
+/*   Updated: 2020/02/28 13:12:23 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "tests.h"
-
-int main(void)
+int ft_isprint(int c)
 {
-	test_ft_isdigit();
-	test_ft_isalpha();
-	test_ft_isascii();
-	test_ft_isalnum();
-	test_ft_isprint();
+	if (c >= 32 && c <= 126)
+		return (1);
 	return (0);
 }
