@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 17:50:53 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/28 18:18:22 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/02/29 11:42:51 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void test_ft_strchr()
 {
 	char *c1 = "test";
-	char *c2 = "Space space";
+	char *c2 = "Space space space";
 	char *c3 = "";
 
 	assert(ft_strchr(c1, 't') == strchr(c1, 't') && "test_ft_strchr()");
