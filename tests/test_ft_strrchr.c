@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 11:52:40 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/29 11:57:57 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/03/01 11:46:19 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ void test_ft_strrchr()
 	assert(ft_strrchr(c2, ' ') == strrchr(c2, ' ') && "test_ft_strrchr()");
 	assert(ft_strrchr(c2, 0) == strrchr(c2, 0) && "test_ft_strrchr()");
 	assert(ft_strrchr(c3, 'a') == strrchr(c3, 'a') && "test_ft_strrchr()");
+	assert(ft_strrchr("bonjour", 'b') == strrchr("bonjour", 'b') &&
+			"test_ft_strrchr()");
 	printf("%sSuccess: %s()\n", C_GREEN, __func__);
 }
