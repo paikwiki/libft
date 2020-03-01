@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 22:13:45 by cbaek             #+#    #+#             */
-/*   Updated: 2020/03/01 22:56:44 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/03/01 23:06:55 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,10 @@ int main(void)
 	for (i = 0; i < 3; i++)
 		printf("s1:%s s2b:%s \033[33mlen:%d\t\033[32m%d\033[0m\n", s1, s2b, i,
 				strncmp(s1, s2b, i));
+	printf("s1:%s s2a:%s \033[33mlen:%d\t\033[32m%d\033[0m\n", s2a, s1, 13,
+			strncmp(s2a, s1, 13));
+	printf("s1:%s s2a:%s \033[33mlen:%d\t\033[32m%d\033[0m\n", s2a, s1, 14,
+			strncmp(s2a, s1, 14));
+	printf("s1:%s s2a:%s \033[33mlen:%d\t\033[32m%d\033[0m\n", s2a, "", 14,
+			strncmp(s2a, "", 14));
 }
