@@ -30,4 +30,6 @@ int main(void)
 	printf("%s\n", strnstr("Foo Bar", " ", 0));
 	printf("%s\n", strnstr("Foo Bar Bar Baz", "Bar", -1));
 	printf("%s\n", strnstr("Foo Bar Baz", "Bar", -1));
+	printf("%s\n", strnstr("Foo Bar Baz", "Fo", 1));
+	printf("%s\n", strnstr("lorem ipsum dolor sit amet", "dolor", 15));
 }
