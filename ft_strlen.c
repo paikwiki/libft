@@ -6,11 +6,11 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 16:07:12 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/28 16:10:42 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/03/01 22:41:21 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

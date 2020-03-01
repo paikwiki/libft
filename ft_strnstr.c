@@ -6,11 +6,11 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 21:39:59 by cbaek             #+#    #+#             */
-/*   Updated: 2020/03/01 12:17:41 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/03/01 22:41:26 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 static int	ft_ismatch(const char *haystack, const char *needle, int i, size_t len)
 {

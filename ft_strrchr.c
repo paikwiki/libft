@@ -6,11 +6,11 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 11:58:31 by cbaek             #+#    #+#             */
-/*   Updated: 2020/03/01 11:47:34 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/03/01 22:41:28 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
