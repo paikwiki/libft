@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 22:40:38 by cbaek             #+#    #+#             */
-/*   Updated: 2020/03/03 01:07:00 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/03/03 02:20:01 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (n > 0)
 	{
 		if (s1[i] == 0 || s2[i] == 0)
-		{
 			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		}
 		if ((unsigned char)s1[i] != (unsigned char)s2[i])
 			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
