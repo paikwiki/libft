@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 22:14:38 by cbaek             #+#    #+#             */
-/*   Updated: 2020/03/01 22:47:04 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/03/02 22:28:00 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int main(void)
 	// test_ft_memchr();
 	// test_ft_memcmp();
 	test_ft_strlen();
-	// test_ft_strlcpy();
-	// test_ft_strlcat();
+	test_ft_strlcpy();
+	test_ft_strlcat();
 	test_ft_strchr();
 	test_ft_strrchr();
 	test_ft_strnstr();
