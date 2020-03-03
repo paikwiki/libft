@@ -6,13 +6,13 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 13:51:24 by cbaek             #+#    #+#             */
-/*   Updated: 2020/03/02 15:51:01 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/03/03 13:50:29 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <strings.h>
+#include <string.h>
 
 void	cleandst(char *dst)
 {
