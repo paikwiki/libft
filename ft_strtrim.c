@@ -6,53 +6,81 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 15:13:49 by cbaek             #+#    #+#             */
-/*   Updated: 2020/03/05 16:27:21 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/03/05 20:46:52 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ismatch(char c, char const *set)
+static char	*get_start(char const *s1, char const *set)
 {
 	size_t	i;
+	size_t	j;
+	char *start;
+	char *backup;
 
 	i = 0;
-	while (set[i] != 0)
-		if (set[i++] == c)
-			return (1);
-	return (0);
+	start = (char *)s1;
+	while (s1[i] != 0)
+	{
+		backup = start;
+		j = 0;
+		while (set[j] != 0)
+		{
+			if (s1[i] == set[j++])
+			{
+				start += 1;
+				break;
+			}
+		}
+		if (start == backup)
+			return (start);
+		i++;
+	}
+	return (start);
 }
 
-static void	setzero(size_t *i, size_t *len)
+static int	get_trimlen(char *str, char const *set, size_t len)
 {
-	*i = 0;
-	*len = 0;
+	size_t	j;
+	size_t	backup;
+
+	while (len > 0)
+	{
+		backup = len;
+		j = 0;
+		while (set[j] != 0)
+		{
+			if (str[len - 1] == set[j])
+			{
+				len--;
+				break;
+			}
+			j++;
+		}
+		if (len == backup)
+			return (len);
+	}
+	return (len);
 }
 
 char		*ft_strtrim(char const *s1, char const *set)
 {
-	char	*tstr;
+	char	*s_ptr;
+	char	*str;
 	size_t	i;
-	size_t	len;
+	size_t	trimlen;
 
-	if (!s1 || !set)
-		return (0);
-	setzero(&i, &len);
-	while (s1[i] != 0)
+	i = 0;
+	trimlen = 0;
+	s_ptr = get_start(s1, set);
+	trimlen = get_trimlen(s_ptr, set, ft_strlen(s_ptr));
+	str = (char *)malloc(sizeof(char) * trimlen);
+	while (i < trimlen)
 	{
-		if (!ismatch(s1[i], set))
-			len++;
+		str[i] = s_ptr[i];
 		i++;
 	}
-	if((tstr = (char *)malloc(sizeof(char) * (len + 1))) == 0)
-		return (0);
-	setzero(&i, &len);
-	while (s1[i] != 0)
-	{
-		if (!ismatch(s1[i], set))
-			tstr[len++] = s1[i];
-		i++;
-	}
-	tstr[len] = 0;
-	return (tstr);
+	str[i] = 0;
+	return (str);
 }
