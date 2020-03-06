@@ -6,7 +6,7 @@
 /*   By: chPaik <chPaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 14:28:53 by cbaek             #+#    #+#             */
-/*   Updated: 2020/03/06 21:45:58 by chPaik           ###   ########.fr       */
+/*   Updated: 2020/03/06 22:28:17 by chPaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,6 @@ char	**ft_split(char const *s, char c)
 	strs = (char **)malloc(sizeof(char *) * (cnt + 1));
 	strs[cnt] = 0;
 	setstrs_mem(strs, (char *)s, c);
-	i = 0;
-	setstrs_str(strs, (char *)s, c, i);
+	setstrs_str(strs, (char *)s, c, 0);
 	return (strs);
 }
