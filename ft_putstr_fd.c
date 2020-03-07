@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 20:52:50 by chPaik            #+#    #+#             */
-/*   Updated: 2020/03/07 21:09:30 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/03/07 22:03:31 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void ft_putstr_fd(char *s, int fd)
 {
-    while (*s != 0)
-        write(fd, s++, 1);
+	while (*s != 0)
+		write(fd, s++, 1);
 }
