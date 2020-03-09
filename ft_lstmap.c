@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/08 00:38:45 by cbaek             #+#    #+#             */
-/*   Updated: 2020/03/09 14:32:18 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/03/09 16:24:04 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstclear(&result, del);
 			return (0);
 		}
-		(temp_res->next)->content = (*f)(lst->content);
-		(temp_res->next)->next = 0;
 		temp_res = temp_res->next;
+		temp_res->content = (*f)(lst->content);
+		temp_res->next = 0;
 		lst = lst->next;
 	}
 	return (result);
