@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 10:00:11 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/06 15:20:19 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/06 15:33:21 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	str_len;
 
 	str_len = ft_strlen(s1) + ft_strlen(s2);
-	if (str_len == 0) {
+	if (str_len == 0)
+	{
 		str = (char *)malloc(sizeof(char));
 		str[0] = 0;
 		return (str);
