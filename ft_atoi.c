@@ -6,11 +6,11 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 09:23:24 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/29 11:25:07 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/06 15:06:27 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int i;
 	int result;

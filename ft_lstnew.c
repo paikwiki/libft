@@ -6,13 +6,13 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 23:39:56 by cbaek             #+#    #+#             */
-/*   Updated: 2020/03/07 23:46:48 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/06 15:09:59 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list *lst;
 

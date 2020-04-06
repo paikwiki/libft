@@ -6,13 +6,13 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 23:05:18 by cbaek             #+#    #+#             */
-/*   Updated: 2020/03/07 23:06:05 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/06 15:07:28 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	while (*s != 0)
 		write(fd, s++, 1);

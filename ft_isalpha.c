@@ -6,13 +6,13 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 23:15:19 by cbaek             #+#    #+#             */
-/*   Updated: 2020/02/27 23:16:42 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/06 15:06:42 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') ||
 			(c >= 'A' && c <= 'Z'))
