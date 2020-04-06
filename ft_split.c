@@ -6,12 +6,11 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 14:28:53 by cbaek             #+#    #+#             */
-/*   Updated: 2020/03/07 21:09:34 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/06 14:45:48 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static void	setstrs_mem(char **strs, char *s, char c)
 {
