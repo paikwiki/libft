@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/08 00:24:11 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/06 15:07:11 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/06 15:15:56 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (!*lst || !lst || !del)
 		return ;
-	while(*lst != 0)
+	while (*lst != 0)
 	{
 		temp = (*lst)->next;
 		(*del)((*lst)->content);

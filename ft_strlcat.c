@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 22:52:20 by cbaek             #+#    #+#             */
-/*   Updated: 2020/03/03 02:19:40 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/06 15:20:51 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	dlen = getlen(dst);
 	slen = getlen((char *)src);
-
 	if (!dst || !src)
 		return (0);
 	if (dlen >= dstsize || dstsize == 0)

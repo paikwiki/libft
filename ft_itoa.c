@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 21:03:56 by chPaik            #+#    #+#             */
-/*   Updated: 2020/03/07 22:00:43 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/06 15:17:26 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ long long	getdigit(long long nbr)
 char		getsign(long long nbr)
 {
 	char		sign;
+
 	if (nbr >= 0)
 		sign = '+';
 	else
@@ -53,7 +54,7 @@ char		*ft_itoa(int n)
 		ln *= -1;
 	memsize = getdigit(ln) + ((sign - 43) / 2);
 	if ((str = (char *)malloc(sizeof(char) * (memsize + 1))) == 0)
-		return 0;
+		return (0);
 	str[memsize--] = 0;
 	if (ln == 0)
 		str[0] = ln + '0';
@@ -64,5 +65,5 @@ char		*ft_itoa(int n)
 	}
 	if (sign == '-')
 		str[memsize] = sign;
-	return str;
+	return (str);
 }

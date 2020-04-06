@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 15:13:49 by cbaek             #+#    #+#             */
-/*   Updated: 2020/03/05 20:46:52 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/06 15:23:04 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ static char	*get_start(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
-	char *start;
-	char *backup;
+	char	*start;
+	char	*backup;
 
 	i = 0;
 	start = (char *)s1;
@@ -30,7 +30,7 @@ static char	*get_start(char const *s1, char const *set)
 			if (s1[i] == set[j++])
 			{
 				start += 1;
-				break;
+				break ;
 			}
 		}
 		if (start == backup)
@@ -54,7 +54,7 @@ static int	get_trimlen(char *str, char const *set, size_t len)
 			if (str[len - 1] == set[j])
 			{
 				len--;
-				break;
+				break ;
 			}
 			j++;
 		}
