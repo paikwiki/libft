@@ -6,13 +6,13 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 21:03:56 by chPaik            #+#    #+#             */
-/*   Updated: 2020/04/06 15:17:26 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/07 15:33:59 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long long	getdigit(long long nbr)
+static long long	getdigit(long long nbr)
 {
 	long long	i;
 
@@ -27,7 +27,7 @@ long long	getdigit(long long nbr)
 	return (i);
 }
 
-char		getsign(long long nbr)
+static char			getsign(long long nbr)
 {
 	char		sign;
 
@@ -41,7 +41,7 @@ char		getsign(long long nbr)
 	return (sign);
 }
 
-char		*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
 	char		*str;
 	char		sign;
