@@ -6,7 +6,7 @@
 #    By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 12:20:56 by cbaek             #+#    #+#              #
-#    Updated: 2020/04/07 16:07:16 by cbaek            ###   ########.fr        #
+#    Updated: 2020/04/07 16:57:30 by cbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,4 +44,4 @@ fclean: clean
 	rm -f $(NAME)
 re: fclean all
 
-.PHONY: all bonus clean fclean re .c.o
+.PHONY: all bonus clean fclean re
