@@ -6,7 +6,7 @@
 #    By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 12:20:56 by cbaek             #+#    #+#              #
-#    Updated: 2020/04/07 15:30:08 by cbaek            ###   ########.fr        #
+#    Updated: 2020/04/07 16:07:16 by cbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,13 +25,11 @@ SRCS_BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \
 OBJS = $(SRCS:%.c=%.o)
 OBJS_BONUS = $(SRCS_BONUS:%.c=%.o)
 
-OBJ_FILES = ${OBJS} $(OBJS_BONUS)
-
-# ifdef WITH_BONUS
-# 	OBJ_FILES = ${OBJS} $(OBJS_BONUS)
-# else
-# 	OBJ_FILES = ${OBJS}
-# endif
+ifdef WITH_BONUS
+	OBJ_FILES = ${OBJS} $(OBJS_BONUS)
+else
+	OBJ_FILES = ${OBJS}
+endif
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) -c $< -o $@
