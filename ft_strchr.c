@@ -6,24 +6,24 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 18:04:35 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/06 15:18:20 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/09 19:03:01 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	int		i;
+	char	*str;
 
-	if (s == 0)
-		return (0);
 	i = 0;
-	while (s[i] != 0)
+	str = (char *)s;
+	while (s[i] != c)
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
+		if (!s)
+			return (0);
 		i++;
 	}
-	if (c == 0)
-		return ((char *)&s[i]);
-	return (0);
+	return ((char *)&s[i]);
 }

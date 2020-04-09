@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 12:07:40 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/06 15:09:21 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/09 14:31:55 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t i;
 
-	if (dst == 0 || src == 0)
+	if (!dst && !src)
 		return (0);
 	i = 0;
 	while (i < n)
