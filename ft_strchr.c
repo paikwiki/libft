@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 18:04:35 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/09 19:06:47 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/09 19:15:17 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,11 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
-
-	i = 0;
-	while (s[i] != 0)
+	while (*s != (unsigned char)c)
 	{
-		if (!s)
+		if (*s == 0)
 			return (0);
-		if (s[i] == c)
-			return ((char *)&s[i]);
-		i++;
+		s++;
 	}
-	return (0);
+	return ((char*)s);
 }
