@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 14:28:53 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/06 15:24:57 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/09 19:47:17 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ static void	setstrs_mem(char **strs, char *s, char c)
 	{
 		if ((s[i - 1] != c && s[i] == c) || (s[i + 1] == 0 && s[i] != c))
 		{
-			strs[cnt++] = (char *)malloc(sizeof(char) * (strlen + 1));
+			if (!(strs[cnt++] = (char *)malloc(sizeof(char) * (strlen))))
+				return ;
 			strlen = 0;
 		}
 		else if (s[i] != c)
@@ -79,7 +80,8 @@ char		**ft_split(char const *s, char c)
 			cnt++;
 		i++;
 	}
-	strs = (char **)malloc(sizeof(char *) * (cnt + 1));
+	if (!(strs = (char **)malloc(sizeof(char *) * (cnt + 1))))
+		return (0);
 	strs[cnt] = 0;
 	setstrs_mem(strs, (char *)s, c);
 	setstrs_str(strs, (char *)s, c, 0);

@@ -6,13 +6,21 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 11:19:53 by cbaek             #+#    #+#             */
-/*   Updated: 2020/03/06 12:01:33 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/09 19:32:41 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+static size_t	getsize(size_t templen, unsigned int start, size_t len)
+{
+	if (templen - start > (size_t)len)
+		return (size_t)len;
+	else
+		return templen - start;
+}
+
+char			*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 	size_t	templen;
@@ -21,21 +29,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	templen = ft_strlen(s);
 	if (templen <= start || len == 0)
 	{
-		str = (char *)malloc(sizeof(char));
+		if(!(str = (char *)malloc(sizeof(char))))
+			return (0);
 		str[0] = 0;
 		return (str);
 	}
-	if (templen - start > (size_t)len)
-		size = (size_t)len;
-	else
-		size = templen - start;
-	str = (char *)malloc(sizeof(char) * (size + 1));
+	size = getsize(templen, start, len);
+	if (!(str = (char *)malloc(sizeof(char) * (size + 1))))
+		return (0);
 	templen = 0;
 	while (size > 0)
 	{
 		str[templen++] = s[start++];
 		size--;
 	}
-	str[start] = 0;
+	str[templen] = 0;
 	return (str);
 }

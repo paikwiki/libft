@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 23:14:23 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/06 15:21:10 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/09 20:10:36 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	len = 0;
 	while (s[len] != 0)
 		len++;
-	str = (char *)malloc(sizeof(char *) * (len + 1));
+	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
+		return (0);
 	i = 0;
 	while (i < len)
 	{
