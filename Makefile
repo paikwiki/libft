@@ -6,7 +6,7 @@
 #    By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 12:20:56 by cbaek             #+#    #+#              #
-#    Updated: 2020/04/07 16:57:30 by cbaek            ###   ########.fr        #
+#    Updated: 2020/04/10 13:54:49 by cbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,12 +32,13 @@ else
 endif
 
 %.o: %.c
-	$(CC) -c $(CFLAGS) -c $< -o $@
-$(NAME): ${OBJ_FILES}
-	ar rcs $@ ${OBJ_FILES}
-all: $(NAME)
+	$(CC) -c $(CFLAGS) -c $< -o ${<:.c=.o}
+$(NAME): $(OBJ_FILES)
+	ar rcs $@ $(OBJ_FILES)
+all:
+	make WITH_BONUS=1 $(NAME)
 bonus:
-	make WITH_BONUS=1 all
+	make WITH_BONUS=1 $(NAME)
 clean:
 	rm -f ${OBJS} $(OBJS_BONUS)
 fclean: clean
