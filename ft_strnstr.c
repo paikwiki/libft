@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 21:39:59 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/09 20:53:08 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/10 12:46:26 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t i;
 
-	if (!haystack)
+	if (!*haystack)
 		return (0);
 	i = 0;
 	if (needle[0] == 0)

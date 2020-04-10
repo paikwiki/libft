@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 11:58:31 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/09 21:02:22 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/10 12:43:24 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int i;
 
-	if (!s)
+	if (!*s)
 		return (0);
 	i = 0;
 	while (s[i] != 0)
