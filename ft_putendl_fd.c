@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 23:05:18 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/06 15:07:28 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/10 14:23:06 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s != 0)
 		write(fd, s++, 1);
 	write(fd, "\n", 1);

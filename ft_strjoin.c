@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 10:00:11 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/06 15:33:21 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/10 14:19:02 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len;
 	size_t	str_len;
 
+	if (!s1 || !s2)
+		return (0);
 	str_len = ft_strlen(s1) + ft_strlen(s2);
 	if (str_len == 0)
 	{

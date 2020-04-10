@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 11:19:53 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/10 12:50:34 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/10 14:17:55 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char			*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	templen;
 	size_t	size;
 
+	if (!s)
+		return (0);
 	templen = ft_strlen(s);
 	if (templen <= start || len == 0)
 	{

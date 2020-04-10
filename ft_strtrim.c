@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 15:13:49 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/09 19:34:00 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/10 14:19:26 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	size_t	trimlen;
 
+	if (!s1 || !set)
+		return (0);
 	i = 0;
 	trimlen = 0;
 	s_ptr = get_start(s1, set);
