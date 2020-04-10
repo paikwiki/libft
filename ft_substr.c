@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 11:19:53 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/10 14:17:55 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/10 14:41:00 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static size_t	getsize(size_t templen, unsigned int start, size_t len)
 	if (templen - start > (size_t)len)
 		return (size_t)len;
 	else
-		return templen - start;
+		return (templen - start);
 }
 
 char			*ft_substr(char const *s, unsigned int start, size_t len)
@@ -31,7 +31,7 @@ char			*ft_substr(char const *s, unsigned int start, size_t len)
 	templen = ft_strlen(s);
 	if (templen <= start || len == 0)
 	{
-		if(!(str = (char *)malloc(sizeof(char))))
+		if (!(str = (char *)malloc(sizeof(char))))
 			return (0);
 		str[0] = 0;
 		return (str);
