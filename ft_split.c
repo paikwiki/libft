@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 14:28:53 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/09 19:47:17 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/10 13:03:56 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void	setstrs_mem(char **strs, char *s, char c)
 	{
 		if ((s[i - 1] != c && s[i] == c) || (s[i + 1] == 0 && s[i] != c))
 		{
-			if (!(strs[cnt++] = (char *)malloc(sizeof(char) * (strlen))))
+			if (!(strs[cnt++] = (char *)malloc(sizeof(char) * (strlen + 1))))
 				return ;
 			strlen = 0;
 		}
@@ -37,30 +37,30 @@ static void	setstrs_mem(char **strs, char *s, char c)
 	}
 }
 
-static void	setstrs_str(char **strs, char *s, char c, size_t i)
+static void	setstrs_str(char **strs, char *s, char c, size_t idx)
 {
 	int	cnt;
 	int	strlen;
 
 	cnt = 0;
 	strlen = 0;
-	while (s[i] == c)
-		i++;
-	while (s[i] != 0)
+	while (s[idx] == c)
+		idx++;
+	while (s[idx] != 0)
 	{
-		if ((s[i] != c) && (s[i + 1] != 0))
-			strs[cnt][strlen++] = s[i];
-		else if (s[i - 1] != c && s[i] == c)
+		if ((s[idx] != c) && (s[idx + 1] != 0))
+			strs[cnt][strlen++] = s[idx];
+		else if (s[idx - 1] != c && s[idx] == c)
 		{
-			strs[cnt++][strlen + 1] = 0;
+			strs[cnt++][strlen] = 0;
 			strlen = 0;
 		}
-		else if (s[i + 1] == 0 && s[i] != c)
+		else if (s[idx + 1] == 0 && s[idx] != c)
 		{
-			strs[cnt][strlen] = s[i];
+			strs[cnt][strlen] = s[idx];
 			strs[cnt][strlen + 1] = 0;
 		}
-		i++;
+		idx++;
 	}
 }
 
@@ -70,6 +70,8 @@ char		**ft_split(char const *s, char c)
 	size_t	i;
 	size_t	cnt;
 
+	if (!*s)
+		return (0);
 	i = 0;
 	cnt = 0;
 	while (s[i] == c)
