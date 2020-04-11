@@ -6,7 +6,7 @@
 #    By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 12:20:56 by cbaek             #+#    #+#              #
-#    Updated: 2020/04/10 18:36:20 by cbaek            ###   ########.fr        #
+#    Updated: 2020/04/10 18:48:33 by cbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,8 +30,8 @@ OBJS_BONUS = $(SRCS_BONUS:%.c=%.o)
 $(NAME): $(OBJS)
 	ar rcs $@ $(OBJS)
 all: $(NAME)
-bonus: ${OBJS} ${OBJS_BONUS}
-	ar rcs ${NAME} ${OBJS} ${OBJS_BONUS}
+bonus: $(NAME) $(OBJS_BONUS)
+	ar rcs $(NAME) $(OBJS_BONUS)
 clean:
 	rm -f ${OBJS} $(OBJS_BONUS)
 fclean: clean
