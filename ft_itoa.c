@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 21:03:56 by chPaik            #+#    #+#             */
-/*   Updated: 2020/04/07 15:33:59 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/12 23:32:16 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,23 +45,23 @@ char				*ft_itoa(int n)
 {
 	char		*str;
 	char		sign;
-	long long	ln;
+	long long	len;
 	long long	memsize;
 
-	ln = (long long)n;
-	sign = getsign(ln);
-	if (ln < 0)
-		ln *= -1;
-	memsize = getdigit(ln) + ((sign - 43) / 2);
+	len = (long long)n;
+	sign = getsign(len);
+	if (len < 0)
+		len *= -1;
+	memsize = getdigit(len) + ((sign - 43) / 2);
 	if ((str = (char *)malloc(sizeof(char) * (memsize + 1))) == 0)
 		return (0);
 	str[memsize--] = 0;
-	if (ln == 0)
-		str[0] = ln + '0';
-	while (ln > 0)
+	if (len == 0)
+		str[0] = len + '0';
+	while (len > 0)
 	{
-		str[memsize--] = (ln % 10) + '0';
-		ln /= 10;
+		str[memsize--] = (len % 10) + '0';
+		len /= 10;
 	}
 	if (sign == '-')
 		str[memsize] = sign;

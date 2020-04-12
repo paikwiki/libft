@@ -6,26 +6,26 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 11:58:31 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/10 17:19:12 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/12 23:25:12 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int i;
+	int	idx;
 
 	if (!s && !*s)
 		return (0);
-	i = 0;
-	while (s[i] != 0)
-		i++;
+	idx = 0;
+	while (s[idx] != 0)
+		idx++;
 	if (c == 0)
-		return ((char *)&s[i]);
-	while (i >= 0)
+		return ((char *)&s[idx]);
+	while (idx >= 0)
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
-		i--;
+		if (s[idx] == c)
+			return ((char *)&s[idx]);
+		idx--;
 	}
 	return (0);
 }

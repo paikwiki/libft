@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 15:13:49 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/10 14:41:12 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/12 23:26:05 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,22 +68,22 @@ char		*ft_strtrim(char const *s1, char const *set)
 {
 	char	*s_ptr;
 	char	*str;
-	size_t	i;
+	size_t	idx;
 	size_t	trimlen;
 
 	if (!s1 || !set)
 		return (0);
-	i = 0;
+	idx = 0;
 	trimlen = 0;
 	s_ptr = get_start(s1, set);
 	trimlen = get_trimlen(s_ptr, set, ft_strlen(s_ptr));
 	if (!(str = (char *)malloc(sizeof(char) * (trimlen + 1))))
 		return (0);
-	while (i < trimlen)
+	while (idx < trimlen)
 	{
-		str[i] = s_ptr[i];
-		i++;
+		str[idx] = s_ptr[idx];
+		idx++;
 	}
-	str[i] = 0;
+	str[idx] = 0;
 	return (str);
 }
