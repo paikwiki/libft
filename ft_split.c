@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 14:28:53 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/13 09:42:45 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/13 09:58:04 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,14 +88,4 @@ char		**ft_split(char const *s, char c)
 	setstrs_mem(strs, (char *)s, c);
 	setstrs_str(strs, (char *)s, c, 0);
 	return (strs);
-}
-
-int main(void)
-{
-	char **strs;
-	char *s = (char *)malloc(sizeof(char) * 2);
-	s[0] = 0;
-	s[1] = 0;
-	strs = ft_split(s, 0);
-	return (0);
 }
