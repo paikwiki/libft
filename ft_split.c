@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 14:28:53 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/13 09:58:04 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/13 10:13:00 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char		**ft_split(char const *s, char c)
 	size_t	i;
 	size_t	cnt;
 
-	if (!s || (!*s && !c))
+	if (!s || ((!s && !*s) && !c))
 		return (0);
 	i = 0;
 	cnt = 0;
