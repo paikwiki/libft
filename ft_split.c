@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 14:28:53 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/13 10:13:00 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/13 14:00:01 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,16 @@ static void	setstrs_mem(char **strs, char *s, char c)
 	i = 0;
 	cnt = 0;
 	strlen = 0;
+	if (!s)
+		return ;
 	while (s[i] == c)
 		i++;
 	while (s[i] != 0)
 	{
 		if ((s[i - 1] != c && s[i] == c) || (s[i + 1] == 0 && s[i] != c))
 		{
+			if (s[i + 1] == 0 && s[i] != c)
+				strlen++;
 			if (!(strs[cnt++] = (char *)malloc(sizeof(char) * (strlen + 1))))
 				return ;
 			strlen = 0;
@@ -44,6 +48,8 @@ static void	setstrs_str(char **strs, char *s, char c, size_t idx)
 
 	cnt = 0;
 	strlen = 0;
+	if (!s)
+		return ;
 	while (s[idx] == c)
 		idx++;
 	while (s[idx] != 0)
