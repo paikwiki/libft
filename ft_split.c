@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 14:28:53 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/17 14:11:54 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/17 14:21:07 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ static void	setstrs_str(char **strs, char *s, char c, size_t idx)
 	}
 }
 
-static char	**get_null_strs()
+static char	**get_null_strs(void)
 {
 	char	**null_strs;
 
