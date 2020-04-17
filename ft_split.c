@@ -6,16 +6,29 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 14:28:53 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/15 21:58:42 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/04/17 14:11:54 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static void	free_strs(char **strs, size_t size)
+{
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		free(strs[i]);
+		i++;
+	}
+	free(strs);
+}
+
 static void	setstrs_mem(char **strs, char *s, char c, size_t idx)
 {
-	int cnt;
-	int strlen;
+	int	cnt;
+	int	strlen;
 
 	cnt = 0;
 	strlen = 0;
@@ -29,7 +42,10 @@ static void	setstrs_mem(char **strs, char *s, char c, size_t idx)
 			if (s[idx + 1] == 0 && s[idx] != c)
 				strlen++;
 			if (!(strs[cnt++] = (char *)malloc(sizeof(char) * (strlen + 1))))
+			{
+				free_strs(strs, cnt - 1);
 				return ;
+			}
 			strlen = 0;
 		}
 		else if (s[idx] != c)
@@ -65,6 +81,18 @@ static void	setstrs_str(char **strs, char *s, char c, size_t idx)
 	}
 }
 
+static char	**get_null_strs()
+{
+	char	**null_strs;
+
+	if (!(null_strs = (char **)malloc(sizeof(char *))))
+	{
+		return (0);
+	}
+	null_strs[0] = 0;
+	return (null_strs);
+}
+
 char		**ft_split(char const *s, char c)
 {
 	char	**strs;
@@ -73,6 +101,8 @@ char		**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
+	if (!*s)
+		return (get_null_strs());
 	idx = 0;
 	cnt = 0;
 	while (s[idx] == c)
