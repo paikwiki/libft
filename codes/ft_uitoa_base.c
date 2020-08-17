@@ -6,13 +6,14 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 16:37:22 by cbaek             #+#    #+#             */
-/*   Updated: 2020/08/17 17:29:01 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/08/17 17:33:30 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	get_baselen(const char *base) {
+size_t	get_baselen(const char *base)
+{
 	size_t idx;
 
 	idx = 0;
