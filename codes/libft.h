@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 19:08:22 by cbaek             #+#    #+#             */
-/*   Updated: 2020/04/09 19:49:42 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/08/17 17:08:11 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,8 @@ void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 	void (*del)(void *));
+
+/* Additional functions */
+char			*ft_uitoa_base(unsigned int n, const char *base);
+
 #endif
