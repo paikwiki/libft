@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 15:40:31 by cbaek             #+#    #+#             */
-/*   Updated: 2020/08/17 16:22:18 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/08/17 17:32:24 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ gcc -Wall -Wextra -Werror test_ft_itoa.c ../codes/ft_itoa.c && ./a.out  && \
 	rm -f a.out
 */
 
-char			*ft_itoa(int n);
+char	*ft_itoa(int n);
 
-int main(void)
+int		main(void)
 {
 	int num1 = 0;
 	int num2 = -1;
