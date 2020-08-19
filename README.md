@@ -1,6 +1,6 @@
 # Libft
 
-[The first subject](./libft.en.subject.pdf) of 42bone2code.
+[The first subject](./libft.en.subject.pdf) of 42cursus.
 
 ## Changelog
 
