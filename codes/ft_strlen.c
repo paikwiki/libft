@@ -6,7 +6,7 @@
 /*   By: cbaek <cbaek@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 16:07:12 by cbaek             #+#    #+#             */
-/*   Updated: 2020/03/01 22:41:21 by cbaek            ###   ########.fr       */
+/*   Updated: 2020/09/18 20:49:55 by cbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t len;
 
 	len = 0;
-	while (s[len] != 0)
+	while (s[len] != '\0')
 		len++;
 	return (len);
 }
